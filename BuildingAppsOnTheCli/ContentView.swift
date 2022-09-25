@@ -10,10 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+            
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("v\(buildNumber)")
         }
         .padding()
     }
